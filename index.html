@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<title>Circular UI</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css">
+
+<!-- load theme file for your application -->
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+	var password = document.getElementById("password");
+
+	var passdis = document.getElementById("password-display");
+	var temp = "2";
+	var inputPass = "";
+</script>
+</head>
+<body>
+
+
+	<div class="ui-page" id="main" data-enable-page-scroll="false">
+
+		<header class="ui-header">
+			<h2 class="ui-title">INPUT PASSWORD</h2>
+		</header>
+		<div class="ui-content">
+			<div id="result"></div>
+			<div id="blockBTN" style="display: none;">
+
+				<a href="#setting-popup" id="setting"><img
+					src="/images/settings.png"></a> <a href="#locker"><img
+					src="/images/key.png"></a>
+			</div>
+
+			<div id="resultContents" class="contents">
+				<div id="resultDetail" class="detail"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="setting-popup" class="ui-popup">
+		<div class="ui-popup-content">
+			<p>좌우를 이용해 비밀번호를 설정하세요</p>
+			<div id="password-display"></div>
+			<button id="setpassword">OK</button>
+			<button id="cancel">Cancel</button>
+			<input type="hidden" id="savepass" />
+		</div>
+		<div class="ui-popup-footer ui-side-button ui-grid-col-2">
+			<a href="#" id="left" class="ui-btn btnleft">L</a> <a href="#"
+				id="right" class="ui-btn btnright">R</a>
+		</div>
+
+
+
+	</div>
+
+	<div class="ui-popup" id="failPass">
+		<div class="ui-popup-content">
+			<h4>잘못입력했어요!</h4>
+			<p>아무버튼을 눌러주세요</p>
+		</div>
+		<div class="ui-popup-footer ui-side-button ui-grid-col-2">
+			<a href="#" class="ui-btn" id="btn-cancel1" data-rel="back">L</a> <a
+				href="#" class="ui-btn" id="btn-cancel1" data-rel="back">R</a>
+		</div>
+
+	</div>
+
+	<div class="ui-page" id="locker" data-enable-page-scroll="false">
+
+		<header class="ui-header">
+			<h2 class="ui-title">LOCK OR UNLOCK!</h2>
+		</header>
+
+		<div class="ui-content">
+
+			<div id="lockBTN">
+				<a href="#successUL" id="unlock"><img src="/images/key.png"></a>
+				<a href="#successL" id="lock"><img src="/images/king.png"></a>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+	<div class="ui-popup" id="successUL" data-enable-page-scroll="false">
+		<div class="ui-popup-content">
+			<h4>UNLOCK!</h4>
+			<p>아무버튼을 눌러주세요</p>
+		</div>
+		<div class="ui-popup-footer ui-side-button ui-grid-col-2">
+			<a href="#" class="ui-btn" id="btn-cancel2" data-rel="back">L</a> <a
+				href="#" class="ui-btn" id="btn-cancel2" data-rel="back">R</a>
+		</div>
+
+	</div>
+	<div class="ui-popup" id="successL" data-enable-page-scroll="false">
+		<div class="ui-popup-content">
+			<h4>LOCK!</h4>
+			<p>아무버튼을 눌러주세요</p>
+		</div>
+		<div class="ui-popup-footer ui-side-button ui-grid-col-2">
+			<a href="#" class="ui-btn" id="btn-cancel3" data-rel="back">L</a> <a
+				href="#" class="ui-btn" id="btn-cancel3" data-rel="back">R</a>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+	<script type="text/javascript" src="js/circle-helper.js"></script>
+
+
+
+	<script src="app.js"></script>
+	<script src="lowBatteryCheck.js"></script>
+</body>
+</html>

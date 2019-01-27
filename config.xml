@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+	id="http://yourdomain/locktest" version="1.0.0" viewmodes="maximized">
+	<tizen:application id="mfJTPdlz5G.locktest" package="mfJTPdlz5G"
+		required_version="2.3.2" />
+	<content src="index.html" />
+	<feature name="http://tizen.org/feature/screen.size.normal" />
+	<icon src="icon.png" />
+	<name>locktest</name>
+	<access origin="*" subdomains="true"></access>
+	<tizen:privilege name="http://tizen.org/privilege/internet" />
+	<feature name="http://tizen.org/feature/network.internet" />
+	<tizen:privilege name="http://tizen.org/privilege/application.launch" />
+	<tizen:privilege name="http://tizen.org/privilege/datacontrol.consumer" />
+	<tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
+	<feature name="http://tizen.org/feature/sensor.wrist_up" />
+	<tizen:profile name="wearable" />
+	<tizen:setting background-support="enable" encryption="disable"
+		hwkey-event="enable" />
+
+	
+</widget>
